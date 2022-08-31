@@ -113,7 +113,7 @@ knitr::include_graphics("https://media.giphy.com/media/3orieOSgDeu3pHrFIY/giphy.
 
 * 148 samples (5 meta-analyses or content analyses not analysed further).
 
-```{r, out.width = "350px", echo=FALSE, fig.align='center'}
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("Body_Image.jpg") # See Elsevier web page
 ```
 
