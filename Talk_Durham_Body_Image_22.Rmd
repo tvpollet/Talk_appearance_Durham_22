@@ -1,6 +1,6 @@
 ---
 title: "Sample Characteristics of Samples Used for Quantitative Analysis in the Journal Body Image"
-author: "Thomas Pollet, Rosie Buhaenko and Jeanne Bovet <br>  Northumbria University <br><br> (thomas.pollet@northumbria.ac.uk)"
+author: "Thomas Pollet, Rosie Buhaenko and Jeanne Bovet <br> Northumbria University <br><br> (thomas.pollet@northumbria.ac.uk)"
 date: "`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)"
 output:
   xaringan::moon_reader:
@@ -217,7 +217,7 @@ knitr::include_graphics("map_chloropleth_k.png")
 
 ???
 Some coverage of Latin America, no coverage of Africa, China, Russia
-Majority of quantitative samples are from the United States (n = 54), followed by the United Kingdom (n = 18), Australia (n = 18) and Canada (n = 11). Map does not show multicountry samples (k = 7).
+Majority of quantitative samples are from the United States (n = 55), followed by the United Kingdom (n = 18), Australia (n = 18) and Canada (n = 11). Map does not show multicountry samples (k = 7).
 
 ---
 ## Map: Total sample sizes.
@@ -281,6 +281,9 @@ knitr::include_graphics("https://media.giphy.com/media/TIXPly7geOCZ7cstWI/giphy.
 --
 
 * The difference between men and women in age is largely driven by that there are more women in student samples. 
+
+???
+Studen samples have a more pronounced difference.
 
 ---
 ## Age: Female samples
@@ -366,13 +369,13 @@ stargazer(table_groups_men_bmi, summary=F, rownames = FALSE, font.size= "small",
 
 --
 
-* Low power to detect 'weak' effect sizes: 52.99% and 33.25%.
+* Low power to detect 'small' effect sizes: 52.99% and 33.25%.
 
 ???
-Robustness checks needed.
+Robustness checks needed. 107 were between-subject
 
 ---
-## Power: mixed designs
+## Power: Mixed designs
 
 * Median sample size was substantially lower for designs classified as mixed (n = 142) versus between-participant (n = 416). 
 
@@ -386,7 +389,10 @@ Robustness checks needed.
 
 --
 
-* Very low power to detect 'weak' effect sizes: 21.96% and 14.40%. 
+* Very low power to detect 'small' effect sizes: 21.96% and 14.40%. 
+
+???
+35 mixed
 
 ---
 ## Sample size by design
