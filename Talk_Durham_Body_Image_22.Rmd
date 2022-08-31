@@ -162,9 +162,13 @@ Sample type based on majority
 
 --
 
-* Some very broad assumptions: _t_-test (between-subject), two-tailed _p_. 80% power is "good".
+* Some very broad assumptions: 
 
-```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+  * _t_-test (between-subject)
+  * two-tailed _p_. 
+  * 80% power is "good".
+
+```{r, out.width = "450px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/3o84sq21TxDH6PyYms/giphy.gif") 
 ```
 
@@ -246,12 +250,12 @@ pregnant women (n = 1), mothers (n = 1) and a sample of students but who scored 
 ---
 ## Gender
 
-* Across all samples: No difference in the median sample sizes of men and women (respectively: 251.5 and 249, Wilcoxon test _p_ = .669). 
+* Across all samples: No difference in the median sample sizes of men and women (respectively: 249 and 247, Wilcoxon test _p_ = .812). 
 
 
 --
 
-* General population samples: Sample sizes did not differ by gender for  (Wilcoxon test _p_ = .844). 
+* General population samples: Sample sizes did not differ by gender (Wilcoxon test _p_ = .844). 
 
 --
 
@@ -259,11 +263,11 @@ pregnant women (n = 1), mothers (n = 1) and a sample of students but who scored 
 
 --
 
-* Samples that collected **both** men and women (n = 58): Significantly more women than men (median difference: 17 more women than men, paired Wilcoxon test, _p_ = .003). 
+* Samples that collected **both** men and women (n = 60): Significantly more women than men (median difference: 16.5 more women than men, paired Wilcoxon test, _p_ = .003). 
 
 --
 
-* Similar conclusion when we restrict to general population samples or student samples (respective _p's_ = .002 and .012).
+* Similar conclusion when we restrict to general population samples or student samples (respective _p's_ = .003 and .012).
 
 ```{r, out.width = "250px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/TIXPly7geOCZ7cstWI/giphy.gif")
@@ -272,7 +276,7 @@ knitr::include_graphics("https://media.giphy.com/media/TIXPly7geOCZ7cstWI/giphy.
 ---
 ## Age
 
-* Weighted mean age by sample size for women (_M_ = 26.45 years, _SD_ = 6.15) was significantly lower than that for men (_M_ = 31.28 _SD_ = 8.94, _t_(52123) = 85.93, _d_ = 0.653). 
+* Weighted mean age by sample size for women (_M_ = 26.72 years, _SD_ = 6.14) was significantly lower than that for men (_M_ = 30.82, _SD_ = 8.70, _t_(52470) = 75.22, _d_ = 0.570). 
 
 --
 
@@ -307,11 +311,11 @@ stargazer(table_groups_men_age, summary=F, rownames = FALSE, font.size= "large",
 ---
 ## BMI
 
-* BMI was reported to be collected for `r round((99/143)*100, 2)`% of the quantitative samples. For the vast majority of samples BMI was self-reported, with `r round((9/99)*100, 2)`% reporting it being measured. 
+* BMI was reported to be collected for `r round((100/144)*100, 2)`% of the quantitative samples. For the vast majority of samples BMI was self-reported, with `r round((9/100)*100, 2)`% reporting it being measured. 
 
 --
 
-* The weighted mean BMI by sample size for women (_M_ = 24.49, _SD_ = 5.31) was significantly lower than that for men (_M_ = 26.9 _SD_ = 5.31, _t_(64280) = 40.49, _p_ < .0001, _d_ = 0.288).
+* The weighted mean BMI by sample size for women (_M_ = 24.41, _SD_ = 5.27) was significantly lower than that for men (_M_ = 25.93, _SD_ = 5.75, _t_(64306) = 39.11, _p_ < .0001, _d_ = 0.278).
 
 --
 
