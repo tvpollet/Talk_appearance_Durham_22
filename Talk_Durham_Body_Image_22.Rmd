@@ -1,5 +1,5 @@
 ---
-title: "Sample Characteristics of Samples Used for Quantitative Analysis in the Journal Body Image"
+title: "Characteristics of Samples Used for Quantitative Analyses in the Journal Body Image"
 author: "Thomas Pollet, Rosie Buhaenko and Jeanne Bovet <br> Northumbria University <br><br> (thomas.pollet@northumbria.ac.uk)"
 date: "`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)"
 output:
@@ -40,7 +40,7 @@ table {
 
 ```{css, echo = F}
 .simulation table {
-  font-size: 7px;     
+  font-size: 6px;     
 }
 ```
 
@@ -70,7 +70,7 @@ knitr::include_graphics("https://media.giphy.com/media/n6ljtq0aO6Zqg/giphy.gif")
 
 --
 
---> W.E.I.R.D. : Western Educated Industrialised Rich and Democratic
+--> [W.E.I.R.D.](https://www2.psych.ubc.ca/~henrich/pdfs/WeirdPeople.pdf) : Western Educated Industrialised Rich and Democratic
 
 --
 
@@ -300,7 +300,7 @@ knitr::include_graphics("https://media.giphy.com/media/TIXPly7geOCZ7cstWI/giphy.
 Student samples have a more pronounced difference.
 
 ---
-## Age: Female samples
+## Age: female and male samples
 
 ```{r echo=FALSE, message=F,warning=FALSE}
 table_groups_women_age<-read.csv("data_quant_Age_group_summary_women.csv")
@@ -312,8 +312,7 @@ colnames(table_groups_women_age) <- str_replace_all(colnames(table_groups_women_
 stargazer(table_groups_women_age, summary=F, rownames = FALSE, font.size= "large", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title = "Weighed means and standard deviations for age by type of sample for female samples", type="html")
 ```
 
----
-## Age: Male samples
+<br>
 
 ```{r, echo=FALSE, message=F,warning=FALSE}
 table_groups_men_age<-read.csv("data_quant_Age_group_summary_men.csv")
@@ -343,7 +342,7 @@ stargazer(table_groups_men_age, summary=F, rownames = FALSE, font.size= "large",
 * **Students**: The weighted mean BMI by sample size for women (_M_ = 22.8, _SD_ = 4.13) was significantly lower than that for men (_M_ = 25.13 _SD_ = 5.03, _t_(2167) = 18.63, _p_ <.0001, _d_ = 0.545).
 
 ---
-## BMI: female samples
+## BMI: female and male samples
 
 ```{r , echo=FALSE, message=F, warning=FALSE}
 table_groups_women_bmi<-read.csv("data_quant_BMI_group_summary_women.csv")
@@ -355,8 +354,7 @@ colnames(table_groups_women_bmi) <- str_replace_all(colnames(table_groups_women_
 stargazer(table_groups_women_bmi, summary=F, rownames = FALSE, font.size= "small", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title = "Weighed means and standard deviations for BMI by type of sample for female samples", type="html")
 ```
 
----
-## BMI: male samples
+<br>
 
 ```{r echo=FALSE, message=F,warning=FALSE}
 table_groups_men_bmi<-read.csv("data_quant_BMI_group_summary_men.csv")
