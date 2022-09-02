@@ -22,6 +22,7 @@ require(stargazer)
 require(tidyverse)
 require(knitr)
 require(kableExtra)
+require(DT)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -40,11 +41,16 @@ table {
 ```
 
 ```{css, echo = F}
-.simulation table {
-  font-size: 6px;     
+.simulation_small table {
+  font-size: 5.9px;     
 }
 ```
 
+```{css, echo = F}
+.simulation table {
+  font-size: 10px;     
+}
+```
 
 ## Today
 
@@ -85,6 +91,11 @@ knitr::include_graphics("https://media.giphy.com/media/n6ljtq0aO6Zqg/giphy.gif")
 
 Previous project on samples used in [Evolution and Human Behaviour and Evolutionary Psychology](https://link.springer.com/article/10.1007/s40806-019-00192-2).
 
+```{r, out.width = "175px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/h7dboNZPsoGwRg9bid/giphy.gif") 
+```
+
+
 ???
 70% Online or student samples / >80% from 'Western' countries (Europe, USA/CAN/AUS)
 
@@ -103,12 +114,13 @@ Descriptive project
 
 * Are samples different from general population in terms of BMI?
 
-```{r, out.width = "200px", echo=FALSE, fig.align='center'}
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/3orieOSgDeu3pHrFIY/giphy.gif") 
 ```
 
 ???
 Why focus on age and BMI. Interesting variables: Aging population / population becoming more obese.
+Separate gen. pop. and students.
 
 ---
 ## Methodology.
@@ -245,7 +257,7 @@ Large sample from New Zealand. (AUS: 230; USA: 317; UK: 271.5; NZL: 6258)
 ## Type of samples
 
 ```{r, out.width = "600px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("waffle_type.png")
+knitr::include_graphics("waffle_type_ed.png")
 ```
 
 ???
@@ -333,11 +345,11 @@ Notice discrepancy in n men for students vs. n women
 ---
 ## BMI
 
-* BMI was reported to be collected for `r round((100/144)*100, 2)`% of the quantitative samples. For the vast majority of samples BMI was self-reported, with `r round((9/100)*100, 2)`% reporting it being measured. 
+* BMI collected for `r round((100/144)*100, 2)`% of the quantitative samples. Vast majority of samples BMI was self-reported. `r round((9/100)*100, 2)`% reporting it being measured. 
 
 --
 
-* The weighted mean BMI by sample size for women (_M_ = 24.41, _SD_ = 5.27) was significantly lower than that for men (_M_ = 26.27, _SD_ = 5.95, _t_(62452) = 46.73, _p_ < .0001, _d_ = 0.312).
+* **All Samples**: The weighted mean BMI by sample size for women (_M_ = 24.41, _SD_ = 5.27) was significantly lower than that for men (_M_ = 26.27, _SD_ = 5.95, _t_(62452) = 46.73, _p_ < .0001, _d_ = 0.312).
 
 --
 
@@ -346,6 +358,9 @@ Notice discrepancy in n men for students vs. n women
 --
 
 * **Students**: The weighted mean BMI by sample size for women (_M_ = 22.8, _SD_ = 4.13) was significantly lower than that for men (_M_ = 25.13, _SD_ = 5.03, _t_(2056) = 18.17, _p_ <.0001, _d_ = 0.548). (Note over 10x as large a difference)
+
+???
+Note again that female students outnumber male students 10 to 1.
 
 ---
 ## BMI: female and male samples
@@ -359,6 +374,7 @@ colnames(table_groups_women_bmi) <- str_replace_all(colnames(table_groups_women_
 # Dep var labels does not work
 stargazer(table_groups_women_bmi, summary=F, rownames = FALSE, font.size= "small", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title = "Weighed means and standard deviations for BMI by type of sample for female samples", type="html")
 ```
+
 
 <br>
 
@@ -379,15 +395,20 @@ stargazer(table_groups_men_bmi, summary=F, rownames = FALSE, font.size= "small",
 
 --
 
-* Excellent statistical power for both theoretical and observed 'large' effect sizes: 100% and >99.99%, respectively. 
+* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 100% and >99.99%, respectively. 
 
 --
 
-* Very good power to detect 'medium' theoretical and observed effect sizes: 99.89% and 95.04%, respectively. 
+* Very good power to detect 'medium' theoretical and empirical effect sizes: 99.89% and 95.04%, respectively. 
 
 --
 
 * Low power to detect 'weak' effect sizes: 51.81% and 32.44%.
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/RX3vhj311HKLe/giphy.gif")
+```
+
 
 ???
 Robustness checks needed.
@@ -399,18 +420,22 @@ Robustness checks needed.
 
 --
 
-* Excellent statistical power for both theoretical and observed 'large' effect sizes: 99.72% and 97.04%, respectively. 
+* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 99.72% and 97.04%, respectively. 
 
 --
 
-* Good power to detect 'medium' theoretical effect size of 0.5 : 84.10%, but inadequate power to document an observed medium effect 56.76%. 
+* Good power to detect 'medium' theoretical effect size of 0.5 : 84.10%, but inadequate power to document an empirical medium effect 56.76%. 
 
 --
 
 * Very low power to detect 'weak' effect sizes: 21.96% and 14.40%. 
 
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l2Jejtlw0QveizCyA/giphy.gif")
+```
+
 ???
-35 mixed
+35 mixed designs
 
 ---
 ## Sample size by design
@@ -421,7 +446,7 @@ knitr::include_graphics("raincloud.png")
 
 
 ---
-class: simulation
+class: simulation_small
 ## Simulations: Age
 
 ```{r echo=FALSE, message=F,warning=FALSE}
@@ -429,10 +454,21 @@ table_sims_age<-read.csv("summary_sims_age.csv")
 colnames(table_sims_age) <- str_replace_all(colnames(table_sims_age), "[:punct:]", " ")
 ```
 
+
 ```{r, results='asis', echo=F}
 # Dep var labels does not work
 stargazer(table_sims_age, summary=F, rownames = FALSE, digits=2, font.size= "tiny", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title="Summary of simulations. Note: p < .1 = .,  p < .05 = *,  p < .01 = **, p < .001 = ***.", type="html")
 ```
+
+---
+## Simulations: Age: scrollable
+
+```{r scroll, echo=F}
+DT::datatable(table_sims_age,
+  fillContainer = FALSE, options = list(pageLength = 8)
+)
+```
+
 
 ---
 class: simulation
@@ -450,11 +486,12 @@ stargazer(table_sims_bmi, summary=F, rownames = FALSE, digits=2, font.size= "tin
 
 ---
 class: simulation
-## Simulations: BMI (students)
+## Simulations: BMI (Students)
 
 ```{r echo=FALSE, message=F,warning=FALSE}
 table_sims_bmi_students<-read.csv("summary_sims_bmi_students.csv")
 colnames(table_sims_bmi_students) <- str_replace_all(colnames(table_sims_bmi_students), "[:punct:]", " ")
+colnames(table_sims_bmi_students)[6]<-"Mean BMI population (20-24)" # unable to fix 6
 ```
 
 ```{r, results='asis', echo=F}
@@ -469,11 +506,15 @@ stargazer(table_sims_bmi_students, summary=F, rownames = FALSE, digits=2, font.s
 
 --
 
-* Simulations suggest that "general population" samples differ from the overall population in age and sometimes also BMI.
+* Simulations suggest that "general population" samples tend to differ from the overall population in age and sometimes also BMI.
 
 --
 
-* Simulations suggest that student samples differ from age matched population samples in BMI.
+* Simulations suggest that student samples tend to differ from age matched population samples in BMI.
+
+```{r, out.width = "450px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l0G17d6DUAPA4HyCs/giphy.gif")
+```
 
 ???
 Limitations: descriptive project. Did not code claims on inference or generality. Though some examples call for further research on other cultures or ethnicities.
@@ -481,7 +522,7 @@ Limitations: descriptive project. Did not code claims on inference or generality
 ---
 ## Moving forward... 
 
-* Description. Whether it is "Good or Bad" is a different question -- I am not an editor for _Body Image_ (not even an active researcher on body image.)
+* **Description.** Whether it is "Good or Bad" is a different question -- I am not an editor for _Body Image_ (not even an active researcher on body image.)
 
 --
 
@@ -491,8 +532,8 @@ Limitations: descriptive project. Did not code claims on inference or generality
 
 * Introduction of [Constraints on Generality statements](https://doi.org/10.1177/1745691617708630).
 
-```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/IfmBUejvpdodjsGydA/giphy-downsized-large.gif")
+```{r, out.width = "450px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3ohc0PrdNeYvAzGa76/giphy.gif")
 ```
 
 ---
@@ -509,11 +550,13 @@ knitr::include_graphics("https://media.giphy.com/media/3ohzdRoOp1FUYbtGDu/giphy.
 ---
 ## Acknowledgments
 
-* I am greatly indebted to my colloborators. (Any mistakes are my own!).
+* I am greatly indebted to my collaborators. (Any mistakes are my own!).
 
 * You for listening!
 
 ```{r, out.width = "500px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/10avZ0rqdGFyfu/giphy.gif")
 ```
+
+
 
