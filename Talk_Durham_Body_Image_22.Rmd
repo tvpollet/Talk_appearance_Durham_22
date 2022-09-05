@@ -275,6 +275,63 @@ knitr::include_graphics("raincloud_type_sample_student_general.png")
 341 vs. 205 - _p_ = .008. Not plotted other and clinical
 
 ---
+## Power: Between-subject
+
+* Median sample size: n = 404 (n = 393, if we restrict the analysis to one sample per paper).
+
+--
+
+* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 100% and >99.99%, respectively. 
+
+--
+
+* Very good power to detect 'medium' theoretical and empirical effect sizes: 99.89% and 95.04%, respectively. 
+
+--
+
+* Low power to detect 'weak' effect sizes: 51.81% and 32.44%.
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/RX3vhj311HKLe/giphy.gif")
+```
+
+
+???
+Robustness checks needed.
+
+---
+## Power: mixed designs
+
+* Median sample size was substantially lower for designs classified as mixed (n = 142) versus between-participant (n = 404). 
+
+--
+
+* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 99.72% and 97.04%, respectively. 
+
+--
+
+* Good power to detect 'medium' theoretical effect size of 0.5 : 84.10%, but inadequate power to document an empirical medium effect 56.76%. 
+
+--
+
+* Very low power to detect 'weak' effect sizes: 21.96% and 14.40%. 
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l2Jejtlw0QveizCyA/giphy.gif")
+```
+
+???
+35 mixed designs
+
+---
+## Sample size by design
+
+```{r raincloud, out.width = "800px", echo=FALSE, fig.align='center', fig.cap="Distribution of sample sizes of quantitative studies in Body Image. Two studies with within-participant design are not plotted"}
+knitr::include_graphics("raincloud.png")
+```
+
+
+---
 ## Gender
 
 * **Across all samples**: No difference in the median sample sizes of men and women (respectively: 240 and 249, Wilcoxon test _p_ = .821). 
@@ -387,63 +444,6 @@ colnames(table_groups_men_bmi) <- str_replace_all(colnames(table_groups_men_bmi)
 # Dep var labels does not work
 stargazer(table_groups_men_bmi, summary=F, rownames = FALSE, font.size= "small", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title= "Weighed means and standard deviations for BMI by type of sample for male samples", type="html")
 ```
-
----
-## Power: Between-subject
-
-* Median sample size: n = 404 (n = 393, if we restrict the analysis to one sample per paper).
-
---
-
-* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 100% and >99.99%, respectively. 
-
---
-
-* Very good power to detect 'medium' theoretical and empirical effect sizes: 99.89% and 95.04%, respectively. 
-
---
-
-* Low power to detect 'weak' effect sizes: 51.81% and 32.44%.
-
-```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/RX3vhj311HKLe/giphy.gif")
-```
-
-
-???
-Robustness checks needed.
-
----
-## Power: mixed designs
-
-* Median sample size was substantially lower for designs classified as mixed (n = 142) versus between-participant (n = 404). 
-
---
-
-* Excellent statistical power for both theoretical and empirical 'large' effect sizes: 99.72% and 97.04%, respectively. 
-
---
-
-* Good power to detect 'medium' theoretical effect size of 0.5 : 84.10%, but inadequate power to document an empirical medium effect 56.76%. 
-
---
-
-* Very low power to detect 'weak' effect sizes: 21.96% and 14.40%. 
-
-```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://media.giphy.com/media/l2Jejtlw0QveizCyA/giphy.gif")
-```
-
-???
-35 mixed designs
-
----
-## Sample size by design
-
-```{r raincloud, out.width = "800px", echo=FALSE, fig.align='center', fig.cap="Distribution of sample sizes of quantitative studies in Body Image. Two studies with within-participant design are not plotted"}
-knitr::include_graphics("raincloud.png")
-```
-
 
 ---
 class: simulation_small
