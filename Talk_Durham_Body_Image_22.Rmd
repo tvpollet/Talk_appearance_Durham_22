@@ -272,7 +272,7 @@ knitr::include_graphics("raincloud_type_sample_student_general.png")
 ```
 
 ???
-341 vs. 205 - _p_ = .008. Not plotted other and clinical
+341 vs. 204 - _p_ = .008. Not plotted other and clinical
 
 ---
 ## Power: Between-subject
@@ -285,7 +285,7 @@ knitr::include_graphics("raincloud_type_sample_student_general.png")
 
 --
 
-* Very good power to detect 'medium' theoretical and empirical effect sizes: 99.89% and 95.04%, respectively. 
+* Very good power to detect 'medium' theoretical and empirical effect sizes: 99.89% and 95.05%, respectively. 
 
 --
 
@@ -334,7 +334,7 @@ knitr::include_graphics("raincloud.png")
 ---
 ## Gender
 
-* **Across all samples**: No difference in the median sample sizes of men and women (respectively: 240 and 249, Wilcoxon test _p_ = .821). 
+* **Across all samples**: No difference in the median sample sizes of men and women (respectively: 240 and 249, Wilcoxon test _p_ = .819). 
 
 --
 
@@ -342,15 +342,15 @@ knitr::include_graphics("raincloud.png")
 
 --
 
-* **Student samples**: female sample sizes tended to be larger than male sample sizes (respective medians: 199.5 vs. 70.5, Wilcoxon test _p_ = .007).
+* **Student samples**: female sample sizes tended to be larger than male sample sizes (respective medians: 199.5 vs. 70.5, Wilcoxon test _p_ = .008).
 
 --
 
-* Samples that collected **both** men and women (n = 60): Significantly more women than men (median difference: 16.5 more women than men, paired Wilcoxon test, _p_ = .002). 
+* Samples that collected **both** men and women (n = 60): Significantly more women than men (median difference: 17 more women than men, paired Wilcoxon test, _p_ = .003). 
 
 --
 
-* Similar conclusion when we restrict to general population samples or student samples (respective _p's_ = .002 and .012).
+* Similar conclusion when we restrict to general population samples or student samples (respective _p's_ = .009 and .0005).
 
 ```{r, out.width = "250px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/TIXPly7geOCZ7cstWI/giphy.gif")
@@ -414,7 +414,7 @@ Notice discrepancy in n men for students vs. n women
 
 --
 
-* **Students**: The weighted mean BMI by sample size for women (_M_ = 22.8, _SD_ = 4.13) was significantly lower than that for men (_M_ = 25.13, _SD_ = 5.03, _t_(2056) = 18.17, _p_ <.0001, _d_ = 0.548). (Note over 10x as large a difference)
+* **Students**: The weighted mean BMI by sample size for women (_M_ = 22.8, _SD_ = 4.13) was significantly lower than that for men (_M_ = 25.13, _SD_ = 5.03, _t_(2064) = 18.16, _p_ <.0001, _d_ = 0.547). (Note over 10x as large a difference)
 
 ???
 Note again that female students outnumber male students 10 to 1.
@@ -484,6 +484,20 @@ colnames(table_sims_bmi) <- str_replace_all(colnames(table_sims_bmi), "[:punct:]
 stargazer(table_sims_bmi, summary=F, rownames = FALSE, digits=2, font.size= "tiny", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title="Summary of simulations. Note: p < .1 = .,  p < .05 = *,  p < .01 = **, p < .001 = ***.", type="html")
 ```
 
+---
+class: simulation
+## Simulations: BMI (general population matched)
+
+```{r echo=FALSE, message=F,warning=FALSE}
+# overrides!
+table_sims_bmi<-read.csv("summary_sims_bmi_gen_pop_matched.csv")
+colnames(table_sims_bmi) <- str_replace_all(colnames(table_sims_bmi), "[:punct:]", " ")
+```
+
+```{r, results='asis', echo=F}
+# Dep var labels does not work
+stargazer(table_sims_bmi, summary=F, rownames = FALSE, digits=2, font.size= "tiny", single.row = TRUE, column.sep.width = "1pt", header=FALSE, style="demography", title="Summary of simulations. Note: p < .1 = .,  p < .05 = *,  p < .01 = **, p < .001 = ***.", type="html")
+```
 ---
 class: simulation
 ## Simulations: BMI (Students)
